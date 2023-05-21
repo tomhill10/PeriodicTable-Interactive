@@ -38,29 +38,45 @@ const filterButton = document.getElementsByClassName("legend-row-wrapper");
 for (const item of filterButton) {
   item.addEventListener("click", function () {
     const children1 = gridContainer1.children;
-    let elementType = item.getAttribute("id");
-    console.log("click");
-    for (const child of children1) {
-      let childId = child.getAttribute("id");
-      if (childId != elementType && child.classList.contains("elementcard")) {
-        child.style.filter = "grayscale(1)";
-        child.style.transition = "0.5s";
-      }
-      if (childId == elementType && child.classList.contains("elementcard")) {
-        child.style.filter = "unset";
-        child.style.transition = "0.5s";
-      }
-    }
     const children2 = gridContainer2.children;
-    for (const child of children2) {
-      let childId = child.getAttribute("id");
-      if (childId != elementType && child.classList.contains("elementcard")) {
-        child.style.filter = "grayscale(1)";
-        child.style.transition = "0.5s";
+    let elementType = item.getAttribute("id");
+    if (elementType == "all") {
+      for (const child of children1) {
+        let childId = child.getAttribute("id");
+        if (childId != elementType && child.classList.contains("elementcard")) {
+          child.style.filter = "unset";
+          child.style.transition = "0.5s";
+        }
       }
-      if (childId == elementType && child.classList.contains("elementcard")) {
-        child.style.filter = "unset";
-        child.style.transition = "0.5s";
+      for (const child of children2) {
+        let childId = child.getAttribute("id");
+        if (childId != elementType && child.classList.contains("elementcard")) {
+          child.style.filter = "unset";
+          child.style.transition = "0.5s";
+        }
+      }
+    } else {
+      for (const child of children1) {
+        let childId = child.getAttribute("id");
+        if (childId != elementType && child.classList.contains("elementcard")) {
+          child.style.filter = "grayscale(1)";
+          child.style.transition = "0.5s";
+        }
+        if (childId == elementType && child.classList.contains("elementcard")) {
+          child.style.filter = "unset";
+          child.style.transition = "0.5s";
+        }
+      }
+      for (const child of children2) {
+        let childId = child.getAttribute("id");
+        if (childId != elementType && child.classList.contains("elementcard")) {
+          child.style.filter = "grayscale(1)";
+          child.style.transition = "0.5s";
+        }
+        if (childId == elementType && child.classList.contains("elementcard")) {
+          child.style.filter = "unset";
+          child.style.transition = "0.5s";
+        }
       }
     }
   });
