@@ -81,12 +81,24 @@ for (const item of filterButton) {
   });
 }
 
+//parse element number into the infoBuilder
 const elementCardClick = document.getElementsByClassName("elementcard");
 const body = document.getElementById("body");
-
 for (const eachEle of elementCardClick) {
   eachEle.addEventListener("click", function () {
     let atomNo = eachEle.getElementsByClassName("elementcard-atomNo");
     infoBuilder(allElements, body, atomNo[0].textContent - 1);
+    const children1 = gridContainer1.children;
+    const children2 = gridContainer2.children;
+    for (const child of children1) {
+      child.style.filter = "grayscale(1)";
+      child.style.transition = "0.5s";
+      child.style.pointerEvents = "none";
+    }
+    for (const child of children2) {
+      child.style.filter = "grayscale(1)";
+      child.style.transition = "0.5s";
+      child.style.pointerEvents = "none";
+    }
   });
 }
