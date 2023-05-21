@@ -14,12 +14,13 @@
     <link rel="stylesheet" href="./css/root.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/legend.css" />
+    <link rel="stylesheet" href="./css/moreInfo.css" />
     <script src="./scripts/app.js" defer type="module"></script>
     <script src="./scripts/fetchModule.js" defer type="module"></script>
     <script src="./scripts/elementBuilder.js" defer type="module"></script>
     <title>Periodic Table - Interactive</title>
   </head>
-  <body>
+  <body id="body">
     <header><h1>Periodic Table - Interactive!</h1></header>
 
     <main class="grid-container1" id="gridContainer1">
@@ -81,5 +82,53 @@
       <div class="emptycard"></div>
     </main>
     <div class="grid-container2" id="gridContainer2"></div>
+
+    <!-- <div class="moreInfo-Container">
+      <div class="elementcard moreInfo-elementcard">
+        <div class="elementcard-topRow">
+          <p class="elementcard-atomNo">123</p>
+          <p class="elementcard-atomMass">123</p>
+        </div>
+        <h2 class="elementcard-elementSymbol">B</h2>
+        <p class="elementcard-elementName">boron</p>
+      </div>
+
+      <div class="info-container">
+        <h1 class="info-element-name">OXYGEN</h1>
+        <p class="info-element-p">atomicMass : "15.9994(3)"</p>
+        <p class="info-element-p">atomicNumber : 8</p>
+        <p class="info-element-p">atomicRadius : 73</p>
+        <p class="info-element-p">boilingPoint : 90</p>
+        <p class="info-element-p">bondingType : "diatomic"</p>
+        <p class="info-element-p">density : 0.001429</p>
+        <p class="info-element-p">groupBlock : "nonmetal"</p>
+        <p class="info-element-p">meltingPoint : 55</p>
+        <p class="info-element-p">standardState : "gas"</p>
+      </div>
+      <button class="closeInfoButton">Close X</button>
+    </div> -->
   </body>
 </html>
+<!-- 
+atomicMass : "15.9994(3)" 
+atomicNumber : 8 
+atomicRadius : 73 
+boilingPoint : 90
+bondingType : "diatomic" 
+cpkHexColor : "FF0D0D" 
+density : 0.001429
+electronAffinity : -141 
+electronegativity : 3.44 
+electronicConfiguration : "[He]
+2s2 2p4" 
+groupBlock : "nonmetal" 
+ionRadius : "140 (-2)" 
+ionizationEnergy : 1314
+meltingPoint : 55 
+name : "Oxygen" 
+oxidationStates : "-2, -1, 1, 2" 
+standardState
+: "gas" 
+symbol : "O" 
+vanDerWaalsRadius : 152 
+yearDiscovered : 1774 -->

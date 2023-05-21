@@ -47,6 +47,11 @@ header h1 {
   width: 120px; */
 }
 
+.elementcard:hover {
+  cursor: pointer;
+  filter: invert(1);
+}
+
 .grid-container2 {
   margin: 20px 0;
   width: 1400px;

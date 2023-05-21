@@ -1,5 +1,4 @@
 function elementBuilder(elementData, container) {
-  // for (let i = 0; i < elementData.length; i++) {
   const elementCard = document.createElement("div");
   elementCard.className = `elementcard card${elementData.atomicNumber} `;
   elementCard.id = `${removeWhiteSpace(elementData.groupBlock)}`;
@@ -16,7 +15,6 @@ function elementBuilder(elementData, container) {
         <h2 class="elementcard-elementSymbol">${elementData.symbol}</h2>
         <p class="elementcard-elementName">${elementData.name}</p>`;
   container.appendChild(elementCard);
-  // }
 }
 
 //remove white space from class name for filter function
@@ -88,30 +86,55 @@ function getColor(elementType) {
   }
 }
 
-export { elementBuilder };
+function infoBuilder(elementData, container, index) {
+  const infoCard = document.createElement("div");
+  infoCard.className = `moreInfo-Container`;
+  infoCard.id = `moreInfo-Container`;
+  infoCard.style.backgroundColor = `var(${getColor(
+    elementData[index].groupBlock
+  )})`;
+  infoCard.innerHTML = `   
+      
+  <div class="elementcard moreInfo-elementcard">
+   <div class="elementcard-topRow">
+          <p class="elementcard-atomNo">${elementData[index].atomicNumber}</p>
+            <p class="elementcard-atomMass">${reduceMass(
+              elementData[index].atomicMass
+            )}</p>
+        </div>
+        <h2 class="elementcard-elementSymbol">${elementData[index].symbol}</h2>
+        <p class="elementcard-elementName">${elementData[index].name}</p>
+  </div>
 
-//OBJECT LAYOUT
+  <div class="info-container">
+    <h1 class="info-element-name">${elementData[index].name}</h1>
+    <p class="info-element-p">atomicMass : ${elementData[index].atomicMass}</p>
+    <p class="info-element-p">atomicNumber : ${
+      elementData[index].atomicNumber
+    }</p>
+    <p class="info-element-p">atomicRadius : ${
+      elementData[index].atomicRadius
+    }</p>
+    <p class="info-element-p">boilingPoint : ${
+      elementData[index].boilingPoint
+    }</p>
+    <p class="info-element-p">bondingType : ${
+      elementData[index].bondingType
+    }</p>
+    <p class="info-element-p">density : ${elementData[index].density}</p>
+    <p class="info-element-p">groupBlock : ${elementData[index].groupBlock}</p>
+    <p class="info-element-p">meltingPoint : ${
+      elementData[index].meltingPoint
+    }</p>
+    <p class="info-element-p">standardState : ${
+      elementData[index].standardState
+    }</p>
+  </div>
+  <button class="closeInfoButton" id="closeButton">Close X</button>
+`;
+  container.appendChild(infoCard);
+  const closeButton = document.getElementById("closeButton");
+  closeButton.addEventListener("click", () => infoCard.remove());
+}
 
-// atomicNumber;
-// symbol;
-// name;
-// atomicMass;
-// electronicConfiguration;
-// electronegativity;
-// atomicRadius;
-// ionRadius;
-// vanDerWaalsRadius;
-// ionizationEnergy;
-// electronAffinity;
-// oxidationStates;
-// standardState;
-// bondingType;
-// meltingPoint;
-// boilingPoint;
-// density;
-// groupBlock;
-// yearDiscovered;
-// block;
-// cpkHexColor;
-// period;
-// group;
+export { elementBuilder, infoBuilder };

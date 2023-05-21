@@ -1,8 +1,7 @@
 import { fetchData } from "./fetchModule.js";
-import { elementBuilder } from "./elementBuilder.js";
+import { elementBuilder, infoBuilder } from "./elementBuilder.js";
 
 let allElements = await fetchData("https://neelpatel05.pythonanywhere.com/");
-console.log(allElements);
 
 const gridContainer1 = document.getElementById("gridContainer1");
 const gridContainer2 = document.getElementById("gridContainer2");
@@ -79,5 +78,15 @@ for (const item of filterButton) {
         }
       }
     }
+  });
+}
+
+const elementCardClick = document.getElementsByClassName("elementcard");
+const body = document.getElementById("body");
+
+for (const eachEle of elementCardClick) {
+  eachEle.addEventListener("click", function () {
+    let atomNo = eachEle.getElementsByClassName("elementcard-atomNo");
+    infoBuilder(allElements, body, atomNo[0].textContent - 1);
   });
 }
