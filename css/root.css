@@ -1,0 +1,16 @@
+:root {
+  --color-alkali: #ff6a00;
+  --color-alkalineEarthMetals: #fbc445;
+  --color-metaloids: #8b1ceb;
+  --color-nobelGases: #095fff;
+  --color-actines: #e82929;
+  --color-reactiveNonmetals: #ff29d1;
+  --color-transitonMetals: #31e3dd;
+  --color-postTran: #197e98;
+  --color-lathanides: #18b22f;
+  --color-halogens: #89ef52;
+  --color-unknownProp: #70ffb8;
+  --color-textdark: #000000;
+  --color-textlight: #ffffff;
+  --color-background: #292b3b;
+}

@@ -1,0 +1,161 @@
+html,
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: var(--color-background);
+  font-family: "Roboto";
+}
+
+header h1 {
+  color: var(--color-textlight);
+  font-family: sans-serif;
+  font-size: xx-large;
+  margin: 50px;
+}
+
+.grid-container1 {
+  width: 1800px;
+  height: 700px;
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+}
+
+.legend-container {
+  grid-row: 1 / span 3;
+  grid-column: 3 / span 10;
+  display: grid;
+  justify-content: center;
+  padding: 60px;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.legend-filter {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-textlight);
+  font-size: 40px;
+  position: relative;
+  bottom: 40px;
+}
+
+.legend-row-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.legend-color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.legend-name {
+  color: var(--color-textlight);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.c1 {
+  background-color: var(--color-textlight);
+}
+.c2 {
+  background-color: var(--color-alkali);
+}
+.c3 {
+  background-color: var(--color-alkalineEarthMetals);
+}
+.c4 {
+  background-color: var(--color-transitonMetals);
+}
+.c5 {
+  background-color: var(--color-postTran);
+}
+.c6 {
+  background-color: var(--color-metaloids);
+}
+.c7 {
+  background-color: var(--color-reactiveNonmetals);
+}
+.c8 {
+  background-color: var(--color-halogens);
+}
+.c9 {
+  background-color: var(--color-unknownProp);
+}
+.c10 {
+  background-color: var(--color-nobelGases);
+}
+.c11 {
+  background-color: var(--color-lathanides);
+}
+.c12 {
+  background-color: var(--color-actines);
+}
+
+.card1 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.elementcard {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  /* height: 120px;
+  width: 120px; */
+}
+
+.grid-container2 {
+  margin: 20px 0;
+  width: 1400px;
+  height: 200px;
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(14, 1fr);
+}
+
+.elementcard-topRow {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.elementcard-elementSymbol {
+  color: var(--color-textlight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.elementcard-elementName {
+  font-weight: 900;
+  font-size: 12px;
+}
