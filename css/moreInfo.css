@@ -1,15 +1,16 @@
 .moreInfo-Container {
-  background-color: green;
+  background-color: var(--color-background);
   width: 800px;
   height: 600px;
   position: absolute;
+  right: 33vw;
   border-radius: 20px;
   border: 2px solid black;
   box-shadow: 5px 5px 0px 5px black;
 }
 
 .slidein {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: slidein;
   animation-iteration-count: 1;
   animation-direction: normal;
@@ -94,9 +95,9 @@
 
 @keyframes slidein {
   from {
-    right: -1000px;
+    right: -100vw;
   }
   to {
-    right: 880px;
+    right: 33vw;
   }
 }

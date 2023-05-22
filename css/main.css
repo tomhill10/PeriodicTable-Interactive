@@ -19,8 +19,8 @@ header h1 {
 }
 
 .grid-container1 {
-  width: 1800px;
-  height: 700px;
+  width: 80vw;
+  height: calc(80vw - 48vw);
   display: grid;
   gap: 10px;
   justify-content: center;
@@ -35,8 +35,10 @@ header h1 {
 }
 
 .elementcard {
-  width: 90px;
-  height: 90px;
+  width: 0.8fr;
+  height: 0.8fr;
+  max-width: 100px;
+  max-height: 100px;
   display: flex;
   padding: 5px 0;
   justify-content: space-between;
@@ -54,8 +56,8 @@ header h1 {
 
 .grid-container2 {
   margin: 20px 0;
-  width: 1400px;
-  height: 200px;
+  width: 62vw;
+  height: calc(60vw - 51vw);
   display: grid;
   gap: 10px;
   justify-content: center;
