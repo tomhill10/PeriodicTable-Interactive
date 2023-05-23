@@ -94,7 +94,7 @@ function infoBuilder(elementData, container, index) {
     elementData[index].groupBlock
   )})`;
   infoCard.innerHTML = `   
-    <div class="elementcard moreInfo-elementcard">
+    <div class="elementcard moreInfo-elementcard" id="moreInfo-elementcard">
      <div class="elementcard-topRow">
             <p class="elementcard-atomNo">${elementData[index].atomicNumber}</p>
               <p class="elementcard-atomMass">${reduceMass(

@@ -1,12 +1,17 @@
 .moreInfo-Container {
   background-color: var(--color-background);
-  width: 800px;
-  height: 600px;
+  width: 35vw;
+  height: 35vw;
+  padding: 2vw;
   position: absolute;
-  right: 33vw;
+  gap: 3%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  right: 30vw;
   border-radius: 20px;
   border: 2px solid black;
-  box-shadow: 5px 5px 0px 5px black;
+  box-shadow: 5px 5px 0px 5px rgb(0, 0, 0);
 }
 
 .slidein {
@@ -16,56 +21,49 @@
   animation-direction: normal;
 }
 
-.moreInfo-elementcard {
-  border: 2px solid black;
+#moreInfo-elementcard {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 5;
+  border: 2px solid rgb(0, 0, 0);
   box-shadow: 5px 5px 0px 2px black;
   border-radius: 10px;
-  position: relative;
-  top: 30px;
-  left: 15px;
-  width: 120px;
-  height: 120px;
 }
 
 .info-container {
-  padding: 1% 5%;
-  padding-bottom: 5%;
-  height: 90%;
-  width: 75%;
+  grid-column: 3 / span 9;
+  grid-row: 1 / span 10;
   border-radius: 20px;
+  padding: 1% 10%;
   border: 2px solid black;
   box-shadow: 5px 5px 0px 2px black;
-  position: relative;
-  right: -170px;
-  bottom: 90px;
   display: grid;
-  gap: 20px;
+  gap: 2%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(10, 1fr);
 }
 
 .closeInfoButton {
   font-weight: 900;
-  height: 10%;
-  width: 120px;
+  grid-column: 1 / span 2;
+  grid-row: 10 / span 1;
+
+  max-width: 120px;
   border-radius: 10px;
   border: 2px solid black;
   box-shadow: 5px 5px 0px 2px black;
-  position: relative;
-  bottom: 147px;
-  left: 15px;
 }
 
 .closeInfoButton:hover {
   box-shadow: 0px 0px 0px 0px black;
-  bottom: 142px;
-  left: 20px;
-  transition: 0.29s;
+  position: relative;
+  top: 5px;
+  right: -5px;
+  transition: 0s;
 }
 
 .info-element-name {
   color: var(--color-textlight);
-  font-size: 60px;
+  font-size: 3vw;
   width: 100%;
   margin-bottom: 2%;
   font-weight: 600;
@@ -85,7 +83,7 @@
   text-shadow: 3px 3px 0px black;
   font-weight: 600;
   font-style: normal;
-  font-size: 20px;
+  font-size: 1vw;
   letter-spacing: 1px;
   border-radius: 10px;
   border: 2px solid black;
@@ -98,6 +96,6 @@
     right: -100vw;
   }
   to {
-    right: 33vw;
+    right: 30vw;
   }
 }

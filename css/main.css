@@ -14,8 +14,7 @@ body {
 header h1 {
   color: var(--color-textlight);
   font-family: sans-serif;
-  font-size: 100px;
-  margin: 50px;
+  font-size: 3vw;
 }
 
 .grid-container1 {
@@ -45,8 +44,6 @@ header h1 {
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  /* height: 120px;
-  width: 120px; */
 }
 
 .elementcard:hover {
@@ -72,6 +69,7 @@ header h1 {
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
+  font-size: 60%;
 }
 
 .elementcard-elementSymbol {
@@ -80,10 +78,10 @@ header h1 {
   justify-content: center;
   align-items: center;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 1.6vw;
 }
 
 .elementcard-elementName {
   font-weight: 900;
-  font-size: 12px;
+  font-size: 60%;
 }
