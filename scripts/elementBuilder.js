@@ -37,16 +37,18 @@ function reduceMass(atomicMass) {
     }
     if (typeof param == "object") {
       paramOut = param[0].toString();
+      console.log(typeof paramOut);
       return paramOut;
     }
   }
   // console.log(toString);
 
-  for (let i = 0; i <= 4; i++) {
+  for (let i = 0; i <= 2; i++) {
     toStringReduced += toString[i];
   }
-  reduced = Number(toStringReduced);
-  return reduced;
+  // reduced = Number(toStringReduced);
+  console.log(toStringReduced);
+  return toStringReduced;
 }
 
 //decide background depending on groupBlock JSON data
